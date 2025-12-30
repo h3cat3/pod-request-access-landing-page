@@ -5,53 +5,82 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
- 
-  <!-- Latest compiled and minified CSS -->
-<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-
-<!-- Latest compiled JavaScript -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-<link href="styles.css" rel="stylesheet">
+  
+  <link rel="stylesheet" href="reset.css">
+  <link rel="stylesheet" href="/src/output.css">
+  
+  <link href="styles.css" rel="stylesheet">
 
   
   <title>Frontend Mentor | Pod request access landing page</title>
 </head>
-<body>
-  <main class="container-fluid blue">
-    <div class="card-img-top float-md-end d-lg-flex justify-content-lg-center custom-img">
-      <picture>
+<body class="bg-slate-900">
+  <main class="relative ">
+    <div class="absolute sm:right-0 lg:my-20">
+      <picture class="">
       <source media="(min-width: 1024px)" srcset="assets/desktop/image-host.jpg">
       <source  media="(min-width: 700px)" srcset="assets/tablet/image-host.jpg">
-      <img  src="assets/mobile/image-host.jpg" alt="a man speaking on microphone">
+      <img  class="custom-img" src="assets/mobile/image-host.jpg" alt="a man speaking on microphone">
     </picture>
     </div>
-    
-    
-    <div class=" mt-md-5 card-img-overlay  p-4  ">
-      <div class="row">
-        <div class="col-md-8 col-lg-7 text-center text-md-start">
-          <div class=" pt-5 pb-4 mt-md-5 ">
-            <img src="assets/desktop/logo.svg" alt="logo pod">
+
+    <div class="absolute top-0 m-9  ">
+      <div class="flex  justify-center py-14  
+                  sm:justify-start sm:py-26 sm:ml-10 
+                  lg:py-12">
+        <img src="assets/desktop/logo.svg" alt="logo pod">
+      </div>
+      
+      <div class="bg-transparent mb-6 
+                sm:bg-slate-900 sm:p-11 sm:pb-20 sm:max-w-lg 
+                  lg:max-w-3xl">
+        <h1 class="text-1 text-center pb-4 sm:pr-16 sm:pt-11 sm:text-left">
+              <span class="text-green-300"> Publish your podcasts</span><br>
+              <span class="text-white"> everywhere.</span>
+        </h1>
+        <p 
+            class="text-2 text-slate-300 text-center 
+                     sm:text-left 
+                     lg:max-w-md">
+              Upload your audio to Pod with a single click. We’ll 
+              then distribute your podcast to Spotify, 
+              Apple Podcasts, Google Podcasts, Pocket Casts and more!
+        </p>
+
+        <div class=" sm:py-20 sm:border-r-slate-900">
+          <div class="grid grid-cols-4 my-10 sm:absolute sm:bottom-10">
+                <a href="/" class="p-2 my-auto">
+                  <img class="" src="assets/desktop/spotify.svg" alt="">
+                </a>
+                <a href="/" class="p-2 my-auto">
+                  <img class="" src="assets/desktop/apple-podcast.svg" alt="">
+                </a>
+                <a href="/" class="p-2 my-auto">
+                  <img class="" src="assets/desktop/google-podcasts.svg" alt="">
+                </a>
+                <a href="/" class="p-2 my-auto">
+                  <img class="" src="assets/desktop/pocket-casts.svg" alt="">
+                </a>
           </div>
-          <div class="blue p-md-5">
-            <h1 class="card-title text-uppercase pb-4"><span class="text-success"> Publish your podcasts</span><br>
-            </spanclass><span class="custom-white"> everywhere.</span></h1>
-            <p class="card-text text-center pb-4 custom-light">Upload your audio to Pod with a single click. We’ll then distribute your podcast to Spotify, 
-            Apple Podcasts, Google Podcasts, Pocket Casts and more!</p>
-            <div class="row custom-light pb-5 text-center w-100">
-              <div class="col-3"><img class="img-fluid mx-2" src="assets/desktop/spotify.svg" alt=""></div>
-              <div class="col-3"><img class="img-fluid mx-2" src="assets/desktop/apple-podcast.svg" alt=""></div>
-              <div class="col-3"><img class="img-fluid mx-2" src="assets/desktop/google-podcasts.svg" alt=""></div>
-              <div class="col-3"><img class="img-fluid mx-2" src="assets/desktop/pocket-casts.svg" alt=""></div>
+<div class=" sm:-mt-10">
+          <form class="" id="form">
+            <div class="sm:relative">
+            <input 
+                class="
+                bg-slate-800 text-white w-full px-7 py-4 rounded-3xl  focus:border-slate-900
+                sm:absolute 
+                " id="email" type="email" placeholder="Email address" aria-label="Email address">
+            <button class="
+                w-full  py-4 my-1 rounded-3xl bg-green-300 text-slate-900
+                sm:absolute sm:z-10 sm:w-1/3 sm:right-0 sm:my-0 
+                " type="submit" class="">Request Access
+            </button>
             </div>
-            <form id="form">
-              
-              <input class=" blue-light custom-lightt w-100 p-3 rounded-pill active text-light " id="email" type="email" placeholder="Email address">
-              <button type="submit" class="btn btn-success rounded-pill w-100 p-3 mt-2 float-md-end">Request Access</button>
-              <span id="error" class="error">Oops! Please check your email</span>
-            </form>
-          </div>
+            <span id="error" class="error text-red-600 pl-7 sm:relative top-14">Oops! Please check your email</span>
+          </form>
         </div>
+    </div>
+        
       </div>
     </div>
    
